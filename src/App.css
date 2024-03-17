@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+:root{
+--clr-1: #052b2f;
+--clr-2: #073438;
+--clr-3: #0e4b50;
+--clr-4: #2d8f85;
+--clr-5: #637c54;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  height: fit-content;
+  background: var(--clr-1);
+  overflow-x: hidden;
+}
+header{
+  background-color: rgba(0, 0, 0, .5);
+  border-bottom: 2px solid black;
+ height: 100px;
+}
+nav{
+  height: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .5);
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  font-size: 17px;
+  text-transform: capitalize;
+  padding: 7px 13px;
+  border-radius: 3px;
+color: white;
+text-decoration: none;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.sites-name{
+  font-size: 3em;
+  margin-left: 6px;
+  line-height: 40px;
+  text-transform: capitalize;
+  background: linear-gradient(to left, red, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+  margin-top: 10px;
+  animation: move 3s linear 1s;
+}
+@keyframes move {
+ 0%{
+  opacity: 1;
+ }
+ 50%{
+  opacity: 0;
+ }
+ 100% {
+  opacity: 1;
+ }
+}
+
+/*.allContainer{
+  width: 100%;
+  height: fit-content;
+  background-image: url('./MealComponents/images/pexels-william-choquette-2641886.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}*/
+.mainSection{
+  width: 100%;
+  height: 1570px;
+  background-image: url('./components/images/pexels-william-choquette-2641886.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: fit-content;
+  margin-left: 12px;
+  margin-top: 10px;
+  background-color: rgba(0, 0, 0, .5);
+  position: relative; 
+  color: white;
+  font-weight: 400;
+}
+.images{
+  width: 200px;
+}
+.container1 .images{
+margin-right: 15px;
+}
+.firstImmages{
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.info-food{
+  margin-left: 20px;
+}
+.info-food ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 400px;
+  height: fit-content;
+  border: none;
+}
+.info-food ul li{
+  text-transform: capitalize;
+  font-size: 1.3em;
+  margin: 5px;
+  list-style: none;
+}
+.container1{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  float: right;
+  margin: 12px;
+  position: relative; 
+  color: white;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, .5);
+  overflow: hidden;
+}
+hr{
+  width: 100%;
+}
+.sub-section{
+   width: 100%;
+   height: 200px;
+   margin: 5px;
+   background-color: rgba(0, 0, 0, .5);
+   display: inline-block;
+   place-content: center;
+   color: white
+}
+.attraction{
+  margin: 15px;
+  padding: 9px;
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: georgia;
+  word-spacing: 3px;
+}
+.btn-container{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+background-color: black;
+border-radius: 5px;
+border-right: 5px solid gray;
+border-left: 2px solid gray;
+border-bottom: 2px solid gray;
+height: fit-content;
+font-size: 2em;
+text-decoration: none;
+text-transform: capitalize;
+color: white;
+padding: 5px;
+margin-top: 10px;
+}
+.randomMeal_img{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  margin-top: 69px;
+  margin-bottom: 10px;
+}
+.mealName{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.mealName h1{
+  text-transform: capitalize;
+  font-size: 2.6em;
+  padding: 5px;
+  color: #fff;
+}
+.mealName h3{
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 1.53em;
+  color: white;
+  padding: 5px;
+}
+.finaleImages{
+  width: 300px;
+  border-radius: 50%;
+}
+.randomResultsContainer{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+.Ingredients, .measurements{
+  background-color: rgba(0, 0, 0, .5);
+  margin: 15px;
+  width: 600px;
+  height: 200px;
+  color: white;
+  overflow: hidden;
+}
+.Ingredients ol{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+.Ingredients ol li{
+  margin-right: 25px;
+}
+.measurements ol{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+.measurements ol li{
+  margin-right: 25px;
+}
+.instructions{
+  background-color: rgba(0, 0, 0, .5);
+  margin: 10px;
+  text-align: center;
+  color: white;
+}
+/* Footer Container */
+.footer {
+  background: #001c1f;
+  color: #ffffff;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.footer-column h3 {
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: #f9c11e;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ffffff;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+}
+
+/* search styles*/
+.searchContainerSection{
+  width: 100%;
+  height: 100vh;
+}
+form {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+}
+form input{
+  margin-top: 10px;
+  width: 900px;
+  height: 50px;
+  font-size: 1.5em;
+  padding: 5px;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+form button{
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  cursor: pointer;
+}
+form button i{
+  color:  black;
+  padding: 3px;
+  font-size: 1.8em;
+ 
+}
+.categoryMain{
+  width: 100%;
+  height: fit-content;
+}
+.categoryMain div{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.categoryMain div button{
+  margin: 30px 10px;
+  border-radius: 10px; 
+  font-size: 1.2em;
+  text-transform: capitalize;
+  padding: 5px;
+  background: #052b2f;
+  color: white;
+}
+.link{
+  margin-top: 15px;
+  margin-right: 10px;
+  font-size: 1.3em;
+  text-transform: capitalize;
+  padding: 5px 10px;
+  background: var(--clr-3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  text-decoration: none;
+}
+.searchResultsContainer{
+  margin-top: 20px;
+  background: var(--clr-1);
+  width: 100%;
+  height: fit-content;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+}
+.searchResult{
+  width: 280px;
+  height: 380px;
+  margin: 5px;
+  position: relative;
+  z-index: 1;
+  background: var(--clr-1);
+  border-radius: 0.6rem;
+}
+.gradientOverlay{
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 250px;
+  height: 390px;
+  position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.gradientOverlay::before{
+  content: '';
+  position: absolute;
+  height: 450px;
+  width: 180px;
+  background: linear-gradient(#00ccff, #d500f9);
+  animation: rotate 4s linear infinite;
+  z-index: 1;
+}
+.gradientOverlay::after{
+  content: '';
+  position: absolute;
+  background: #0e1538;
+  inset: 5px;
+  border-radius: 10px;
+}
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.searchResultsContainer img{
+  width: 100%;
+  height: 70%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+ .name{
+  color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 1.2em;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+ .Searchbtn{
+  margin-top: 25px;
+  margin-right: 5px;
+  font-size: 1.4em;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  background: var(--clr-3);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+.pcontainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  place-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .5);
+}
+.about{
+  text-align: center;
+  font-size: 1.2em;
+  width: 50%;
+  color: white;
+}
+@media (max-width: 1242px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    height: fit-content;
+    margin-left: 12px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    position: relative; 
+    color: white;
+    font-weight: 400;
+  }
+  .container1 .images{
+  margin-right: 10px;
+  }
+  .firstImmages{
+    width: 100%;
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .info-food{
+    margin-left: 5px;
+  }
+}
+@media (max-width: 980px) {
+
+  .images{
+    width: 100%;
+  }
+  .container1 .images{
+  margin-right: 5px;
+  }
+  .firstImmages{
+    width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  .info-food{
+    margin-left: 20px;
+  }
+  .info-food ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 250px;
+    height: fit-content;
+    border: none;
+  }
+  .info-food ul li{
+    text-transform: capitalize;
+    font-size: 1em;
+    list-style: none;
+  }
+  .mealName h3{
+    margin-left: 12px;
+    margin-right: 12px;
+    font-size: 1.2em;
+    color: white;
+    padding: 5px;
+  }
+}
+@media (max-width: 768px) {
+  .sites-name{
+    font-size: 20px;
+  }
+  .container1 .images{
+    margin-right: 2px;
+    }
+    .firstImmages{
+      width: 100%;
+      margin: 5px;
+      border-radius: 10px;
+    }
+    .info-food{
+      margin-left: 20px;
+    }
+    .info-food ul{
+      width: 200px;
+    }
+    .mealName h3{
+      font-size: 1em;
+      color: white;
+      padding: 5px;
+    }
+    .categoryMain div button{
+      margin: 20px 5px;
+      border-radius: 10px; 
+      font-size: 1em;
+    }
+    .searchResultsContainer img{
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    .searchResult{
+      width: 200px;
+      height: 250px;
+    }
+    .searchResult img{
+      width: 100%;
+      height: 50%;
+    }
+    .gradientOverlay{
+      margin-top: 10px;
+      margin-left: 7px;
+      width: 210px;
+      height: 260px;
+    }
+    .link{
+      margin-top: 5px;
+      font-size: 1em;
+    }
+}
+@media (max-width: 580px) {
+  .mainSection{
+    height: 1260px;
+  }
+  .container, .container1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    margin-left: 0;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    position: relative; 
+    color: white;
+    font-weight: 200;
+  }
+  .info-food ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 400px;
+    height: fit-content;
+    border: none;
+  }
+  .info-food ul li{
+    text-transform: capitalize;
+    font-size: 1em;
+    margin: 5px;
+    list-style: none;
+  }
+  .sub-section{
+    width: 100%;
+    height: fit-content;
+ }
+ .attraction{
+   margin: 15px;
+   padding: 9px;
+   font-size: 1em;
+   font-weight: 400;
+   font-family: georgia;
+   word-spacing: 3px;
+ }
+ .btn{
+ font-size: 1.4em;
+ }
+ .mealName h1{
+   font-size: 1.4em;
+ }
+ .mealName h3{
+   font-size: 1em;
+ }
+ .finaleImages{
+   width: 170px;
+ }
+ .Ingredients, .measurements{
+   margin: 5px;
+   width: 600px;
+   height: fit-content;
+ }
+ .instructions{
+   background-color: rgba(0, 0, 0, .5);
+   margin: 10px;
+   text-align: center;
+   color: white;
+   word-spacing: 5px;
+ }
+.searchResult{
+  width: 160px;
+  height: 250px;
+}
+.gradientOverlay{
+  margin-top: 10px;
+  margin-left: 7px;
+  width: 170px;
+  height: 260px;
+}
+.link{
+  margin-top: 5px;
+  font-size: 1em;
+}
+.gradientOverlay::before{
+  width: 140px;
+}
+}
+@media (max-width: 500px) {
+  body{
+    font-size: small;
+  }
+  .mainSection{
+    height: 1140px;
+  }
+  .h1mealName{
+    font-size: small;
+  }
+  .container, .container1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+    margin-left: 0;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    position: relative; 
+    color: white;
+    font-weight: 200;
+  }
+  .info-food ul{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+  }
+  .info-food ul li{
+    text-transform: capitalize;
+    font-size: 1em;
+    margin: 5px;
+    list-style: none;
+  }
+  nav ul li a{
+    font-size: 1.2em;
+    text-transform: capitalize;
+    padding: 3px 8px;
+    border-radius: 3px;
+  color: white;
+  }
+  .sites-name{
+    font-size: 1.5em;
+  }
+ 
+}
+@media (max-width: 425px) {
+  .categoryMain div button{
+    margin: 10px 3px;
+    border-radius: 5px; 
+  }
+  .searchResultsContainer img{
+    width: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  .searchResult{
+    width: 160px;
+    height: 250px;
+  }
+  .searchResult img{
+    width: 100%;
+    height: 50%;
+  }
+  .gradientOverlay{
+    margin-top: 10px;
+    margin-left: 2px;
+    width: 150px;
+    height: 260px;
+  }
+  .link{
+    margin-top: 5px;
+    font-size: 1em;
+  }
+  form input{
+    width: 300px;
+    margin: 13x;
+    font-size: small;
+    height: 50px;
+  }
+  form button{
+    width: 40px;
+    height: 40px;
+  }
+}
