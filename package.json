@@ -1,6 +1,6 @@
 {
   "homepage": "https://Privils.github.io/privils_food_site",
-  "name": "privils_food_site",
+  "name": "food_site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -70,18 +70,6 @@ text-decoration: none;
   -webkit-text-fill-color: transparent;
   font-weight: bolder;
   margin-top: 10px;
-  animation: move 3s linear 1s;
-}
-@keyframes move {
- 0%{
-  opacity: 1;
- }
- 50%{
-  opacity: 0;
- }
- 100% {
-  opacity: 1;
- }
 }
 
 /*.allContainer{
