@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/privils_food_site/static/css/main.1ff694d3.css",
-    "main.js": "/privils_food_site/static/js/main.b16cd07b.js",
-    "static/js/453.123204fb.chunk.js": "/privils_food_site/static/js/453.123204fb.chunk.js",
+    "main.css": "/privils_food_site/static/css/main.b4dbe9bf.css",
+    "main.js": "/privils_food_site/static/js/main.618f87e7.js",
+    "static/js/453.57913502.chunk.js": "/privils_food_site/static/js/453.57913502.chunk.js",
     "static/media/pexels-william-choquette-2641886.jpg": "/privils_food_site/static/media/pexels-william-choquette-2641886.01154020f45ff414a291.jpg",
     "static/media/italian.jpg": "/privils_food_site/static/media/italian.fd24160ad1a0bd9f0e73.jpg",
     "static/media/indian.jpg": "/privils_food_site/static/media/indian.0f97a3a4867e698fcfe7.jpg",
@@ -11,12 +11,12 @@
     "static/media/egyptian.jpg": "/privils_food_site/static/media/egyptian.433c8fb05989bc89d359.jpg",
     "static/media/turkish.jpg": "/privils_food_site/static/media/turkish.7cf7bd43afe4ef8fa3ba.jpg",
     "index.html": "/privils_food_site/index.html",
-    "main.1ff694d3.css.map": "/privils_food_site/static/css/main.1ff694d3.css.map",
-    "main.b16cd07b.js.map": "/privils_food_site/static/js/main.b16cd07b.js.map",
-    "453.123204fb.chunk.js.map": "/privils_food_site/static/js/453.123204fb.chunk.js.map"
+    "main.b4dbe9bf.css.map": "/privils_food_site/static/css/main.b4dbe9bf.css.map",
+    "main.618f87e7.js.map": "/privils_food_site/static/js/main.618f87e7.js.map",
+    "453.57913502.chunk.js.map": "/privils_food_site/static/js/453.57913502.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1ff694d3.css",
-    "static/js/main.b16cd07b.js"
+    "static/css/main.b4dbe9bf.css",
+    "static/js/main.618f87e7.js"
   ]
 }
