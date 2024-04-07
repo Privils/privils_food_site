@@ -383,6 +383,7 @@ form button i{
   padding: 5px;
   background: #052b2f;
   color: white;
+  cursor: pointer;
 }
 .link{
   margin-top: 15px;

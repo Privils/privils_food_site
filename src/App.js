@@ -1,6 +1,3 @@
-
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -8,6 +5,7 @@ import SearchResult from './components/SearchResult';
 import Recipe from './components/Recipe';
 import About from './components/About';
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [selectedMeal, setSelectedMeal] = useState(null);
@@ -19,12 +17,11 @@ function App() {
     <Router>
       <div>
         <Header />
-        <Home />
         <Routes>
-        <Route index element={<Home/>}/>
-      <Route path='/search_Meal' element={<SearchResult/>}/>
-      <Route path='/about' element={<About/>}/>
-      <Route path="/recipes/:mealId" element={<Recipe/>} />
+          <Route index element={<Home/>}/>
+          <Route path="/search_Meal" element={<SearchResult />} />
+          <Route path="/recipe/:id" element={<Recipe />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
@@ -32,5 +29,3 @@ function App() {
 }
 
 export default App;
-
-
