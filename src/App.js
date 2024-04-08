@@ -14,16 +14,15 @@ function App() {
   };
 
   return (
-    <Router>
-      <div>
+    <Router basename='/privils_food_site'>
         <Header />
         <Routes>
           <Route index element={<Home/>}/>
+          <Route path='/privils_food_site' element={<Home/>}/>
           <Route path="/search_Meal" element={<SearchResult />} />
-          <Route path="/recipe/:id" element={<Recipe />} />
+          <Route path="/recipes/:mealId" element={<Recipe />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </div>
     </Router>
   );
 }
