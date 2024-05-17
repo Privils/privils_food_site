@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/privils_food_site/static/css/main.bc99a6c8.css",
-    "main.js": "/privils_food_site/static/js/main.a06fcf68.js",
+    "main.js": "/privils_food_site/static/js/main.4fe07d0e.js",
     "static/js/453.57913502.chunk.js": "/privils_food_site/static/js/453.57913502.chunk.js",
     "static/media/pexels-william-choquette-2641886.jpg": "/privils_food_site/static/media/pexels-william-choquette-2641886.01154020f45ff414a291.jpg",
     "static/media/italian.jpg": "/privils_food_site/static/media/italian.fd24160ad1a0bd9f0e73.jpg",
@@ -12,11 +12,11 @@
     "static/media/turkish.jpg": "/privils_food_site/static/media/turkish.7cf7bd43afe4ef8fa3ba.jpg",
     "index.html": "/privils_food_site/index.html",
     "main.bc99a6c8.css.map": "/privils_food_site/static/css/main.bc99a6c8.css.map",
-    "main.a06fcf68.js.map": "/privils_food_site/static/js/main.a06fcf68.js.map",
+    "main.4fe07d0e.js.map": "/privils_food_site/static/js/main.4fe07d0e.js.map",
     "453.57913502.chunk.js.map": "/privils_food_site/static/js/453.57913502.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bc99a6c8.css",
-    "static/js/main.a06fcf68.js"
+    "static/js/main.4fe07d0e.js"
   ]
 }
