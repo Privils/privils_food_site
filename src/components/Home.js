@@ -8,7 +8,7 @@ import image5 from "../components/images/turkish.jpg";
 import { Link } from 'react-router-dom';
 
 
-const Home = () => {
+const Home = ({ reloadPage }) => {
     const [randomMeal, setRandomMeal] = useState([]);
     useEffect(() => {
       getRandomMeal();

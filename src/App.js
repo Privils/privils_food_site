@@ -12,16 +12,18 @@ function App() {
   const handleViewRecipeClick = (mealId) => {
     setSelectedMeal(mealId);
   };
-
+  const reloadPage = () => {
+    location.reload(); 
+  };
   return (
     <Router basename='/privils_food_site'>
         <Header />
         <Routes>
-          <Route index element={<Home/>}/>
-          <Route path='/privils_food_site' element={<Home/>}/>
-          <Route path="/search_Meal" element={<SearchResult />} />
-          <Route path="/recipes/:mealId" element={<Recipe />} />
-          <Route path="/about" element={<About />} />
+          <Route index element={<Home reloadPage={reloadPage}/>}/>
+          <Route path='/privils_food_site' element={<Home reloadPage={reloadPage}/>}/>
+          <Route path="/search_Meal" element={<SearchResult reloadPage={reloadPage} />} />
+          <Route path="/recipes/:mealId" element={<Recipe reloadPage={reloadPage} />} />
+          <Route path="/about" element={<About reloadPage={reloadPage} />} />
         </Routes>
     </Router>
   );
