@@ -1,6 +1,6 @@
 import React from 'react'
 
-const About = ({ reloadPage }) => {
+const About = () => {
   return (
    <>
         <div className='pcontainer'>

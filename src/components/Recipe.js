@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const Recipe = ({ reloadPage }) => {
+const Recipe = () => {
     const { mealId } = useParams(); // Extract mealId from URL parameter
     const [mealDetails, setMealDetails] = useState(null);
   

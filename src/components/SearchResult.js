@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import Recipes from "./Recipe";
 
-const SearchResult = ({ reloadPage }) => {
+const SearchResult = () => {
     const [searchMeal, setSearchMeal] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedMealDetails, setSelectedMealDetails] = useState(null); // New state variable to store selected meal details

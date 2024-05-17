@@ -6,9 +6,10 @@ import image3 from "../components/images/american.jpg";
 import image4 from "../components/images/egyptian.jpg";
 import image5 from "../components/images/turkish.jpg";
 import { Link } from 'react-router-dom';
+import { FaHeart } from 'react-icons/fa'
 
 
-const Home = ({ reloadPage }) => {
+const Home = () => {
     const [randomMeal, setRandomMeal] = useState([]);
     useEffect(() => {
       getRandomMeal();
@@ -269,7 +270,7 @@ const Home = ({ reloadPage }) => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 Yummy notes. All rights reserved.</p>
+        <p>&copy; 2024 Yummy notes made with  <FaHeart className='faHeart'/>  by <span className='Priviledge'>Priviledge</span>. All rights reserved.</p>
       </div>
     </footer>
       </section>
