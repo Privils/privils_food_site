@@ -104,7 +104,7 @@ const SearchResult = () => {
           <form id="form" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Search for country name (Russian, Turkish, Chinese)"
+              placeholder="Search for meal name"
               name="search"
             />
             <button type="submit">
