@@ -36,7 +36,7 @@ const SearchResult = () => {
     };
   
     const handleViewRecipeClick = async (mealId) => {
-      // Fetch details of the selected meal
+      // Fetching details of the selected meal
       try {
         const response = await fetch(
           `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`
@@ -48,8 +48,9 @@ const SearchResult = () => {
       }
     };
   
+    //function for search input and results
     async function getSearchResults() {
-      const url = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${searchQuery}`;
+      const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`;
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -59,7 +60,7 @@ const SearchResult = () => {
       }
     }
   
-    // Fetch categories
+    // Fetching categories
     const fetchCategories = async () => {
       try {
         const response = await fetch(
@@ -72,7 +73,7 @@ const SearchResult = () => {
       }
     };
   
-    // Fetch meals by category
+    // Fetchinng meals by category
     const fetchMealsByCategory = async () => {
       try {
         const response = await fetch(
@@ -85,7 +86,7 @@ const SearchResult = () => {
       }
     };
   
-    // Handle category click
+    //function to  Handle category click
     const handleCategoryClick = (category) => {
       setSelectedCategory(category);
     };
@@ -112,7 +113,7 @@ const SearchResult = () => {
           </form>
           <div>
             <section className="categoryMain">
-              {/* Display categories */}
+              {/* Displaying categories */}
               <div>
                 {categories.map((category) => (
                   <button
@@ -125,7 +126,7 @@ const SearchResult = () => {
               </div>
             </section>
 
-            {/* Display meals within the selected category */}
+            {/* for Displaying meals within the selected category */}
             {selectedCategory && (
               <section>
                 <div  className="searchResultsContainer">
@@ -157,9 +158,10 @@ const SearchResult = () => {
           </div>
         </section>
         {selectedMealDetails && <Recipes mealDetails={selectedMealDetails} />}{" "}
-        {/* Render Recipes component with mealDetails prop */}
+      
       </>
     );
 }
 
 export default SearchResult;
+
