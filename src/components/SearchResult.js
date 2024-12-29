@@ -8,11 +8,21 @@ const SearchResult = () => {
     const [searchMeal, setSearchMeal] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedMealDetails, setSelectedMealDetails] = useState(null); // New state variable to store selected meal details
-  
+    const [error, setError] = useState(null);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [meals, setMeals] = useState([]);
   
+  
+    const urls = [
+      `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`,
+      `https://www.themealdb.com/api/json/v1/1/search.php?f=${searchQuery}`
+
+    ];
+
+ 
+
+
     useEffect(() => {
       fetchCategories();
 
@@ -47,10 +57,45 @@ const SearchResult = () => {
         console.log("error fetching meal details", error);
       }
     };
-  
-    //function for search input and results
-    async function getSearchResults() {
-      const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`;
+
+
+    const getSearchResults = async () => {
+      let data = null;
+
+      for (const url of urls) {
+        try {
+          const response = await fetch(url);
+
+          if (!response.ok) {
+            console.warn(`Failed fetch for URL: ${url}`);
+            continue; // Skip to the next URL
+          }
+
+          const result = await response.json();
+
+          if (result.meals && result.meals.length > 0) {
+            data = result.meals; // Valid data found
+            break; // Stop fetching further
+          } else {
+            console.warn(`No data found for URL: ${url}`);
+          }
+        } catch (err) {
+          console.error(`Error fetching from URL: ${url}`, err);
+        }
+      }
+
+      if (data) {
+        setSearchMeal(data);
+        setError(null);
+      } else {
+        setSearchMeal([]); 
+        setError("No meals found for the given query.");
+      }
+    };
+
+    // //function for search input and results
+    async function getSearchResultsArea() {
+      const url = `https://www.themealdb.com/api/json/v1/1/search.php?a=${searchQuery}`;
       try {
         const response = await fetch(url);
         const data = await response.json();
@@ -104,7 +149,7 @@ const SearchResult = () => {
           <form id="form" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Search for meal name"
+              placeholder="Search meal name or input any letter"
               name="search"
             />
             <button type="submit">
